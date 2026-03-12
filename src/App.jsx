@@ -1,14 +1,21 @@
 import './App.css'
+import Todo from './Todo.jsx'
 
 // 1. App Component: Sob component ekhane eksathe thakbe
 function App() {
   return (
     <>
       <h1>React Core Concepts</h1>
-     
-      <Student />
-      <Developer name='Mosharof' tech='JavaScript' />
-      <Player nam="Mosharof" runs="400" />
+      <Todo task="Learn React" isDone={true}></Todo>
+      <Todo task="Learn JavaScript" isDone={false}></Todo>
+      <Todo task="Learn Java" isDone={true}></Todo>
+      {/* <Student></Student>
+      <Developer name='Mosharof' tech='JavaScript'></Developer>
+      <Player nam="Mosharof" runs="400"></Player> */}
+
+      
+
+      
     </>
   )
 }
