@@ -22,13 +22,13 @@
 // }
 
 
-export default function Todo({task, isDone, time = 0}){
+export default function Todo({task, isDone, time }){
     let lisItem ;
     if(isDone === true) {
-        lisItem= <li>Done: {task}</li>
+        lisItem= <li>Done: {task} Time: {time ? 'I am Done' : 'Not Done'}</li>
     }
     else{
-        lisItem= <li>Pending: {task}</li>
+        lisItem= <li>Pending: {task} Time: {time ? 'I am Done' : 'Not Done'}</li>
     }
     return lisItem;
 }
