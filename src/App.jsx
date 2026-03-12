@@ -2,6 +2,7 @@ import './App.css'
 import Todo from './Todo.jsx'
 import Name from './name.jsx'
 import Student from './student.jsx'
+import Libray from './Libray.jsx'
 
 // 1. App Component: Sob component ekhane eksathe thakbe
 function App() {
@@ -9,12 +10,18 @@ function App() {
   const student = [
     {id:1, name:'Rohim', age: 10},
     {id:2, name:'Korim', age:20}
+  ];
+  const books = [
+    {id:1 , name:'JavaScript', price: 250},
+    {id:2 , name:'Java', price: 280},
+    {id:3 , name:'CSS', price: 50},
   ]
   return (
     <>
       <h1>React Core Concepts</h1>
+      <Libray books={books}></Libray>
       {
-        student.map(student => <Student student={student}></Student>)
+        student.map(student => <Student student={student}key={student.id}></Student>)
       }
       {
         nam.map(nam => <Name nam={nam}></Name>)
